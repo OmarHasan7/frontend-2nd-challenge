@@ -19,6 +19,10 @@ head,body {
     --Grayish-blue: hsl(210, 4%, 67%);
     --White: hsl(0, 0%, 100%);
 }
+.flex {
+    display: flex;
+    flex-direction: column
+}
 
 .hero{
     display: flex;
@@ -52,3 +56,139 @@ h1 {
     align-self: center;
     margin-top: -4.25em;
 }
+.Image {
+    width: 100%;   
+}
+section {
+    display: flex;
+    flex-direction: column;
+    margin: 15% 6%;
+    justify-content: space-between;
+    text-align: center;
+
+}
+.section1 {
+    height: 15em;
+}
+h2 {
+    margin: 0;
+    font-size: 1.7em;
+    font-family: "Fraunces", serif;
+    color: var(--Very-dark-desaturated-blue);
+}
+p {
+    padding-bottom: 3.5%;
+    font-weight: 600;
+    font-family: "barlow", serif;
+    line-height: 1.65em;
+}
+.p-color1 {
+    color: var(--Dark-grayish-blue);
+}
+a {
+    font-size: 0.8em;
+    font-weight: 700;
+    font-family: "Fraunces", serif;
+    letter-spacing: 0.07em;
+    color: var(--Very-dark-desaturated-blue);
+}
+.a1 {
+    text-decoration: none;
+}
+.line {
+    margin: -1.5% 0 0 0;
+    width: 40%;
+    height: 0.4em;
+    opacity: 0.4;
+    border-radius: 50px;
+    align-self: center;
+    z-index: -1;
+}
+.l1 {
+    background: var(--Yellow);
+}
+.l2 {
+    background: var(--Soft-red);
+}
+.section2 {
+    margin: -58% 6% 25% 6%;
+    height: auto;
+    justify-content: ;
+}
+h3 {
+    font-size: 1.4em;
+    font-family: "Fraunces", serif;
+}
+.section2 > p {
+    margin: 0;
+    font-size: 1rem;
+}
+.section3 {
+    margin: 30% 6%;
+
+}
+.signature {
+    justify-content: center;
+}
+h4 {
+    margin-bottom: 18%;
+    font-size: 0.9em;
+    font-family: "Fraunces", serif;
+    color: var(--Grayish-blue);
+    text-align: center;
+    letter-spacing: 0.25em;
+}
+.name {
+    margin: 0;
+    font-family: "Fraunces", serif;
+    color: var(--Very-dark-desaturated-blue);
+}
+.job {
+    margin: 0;
+    font-size: small;
+    font-family: "Fraunces", serif;
+    color: var(--Grayish-blue);
+}
+
+
+.crcl-img {
+    width: 4em;
+    border-radius: 50%;
+    align-self: center;
+}
+.p2 {
+    margin-top: 10%;
+    font-weight: 600;
+    color: var(--Very-dark-grayish-blue);
+}
+.grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+
+}
+.g-item {
+    width: 50vw;
+}
+footer {
+    background: var(--Dark-moderate-cyan);
+    width: 100%;
+    height: 21.83rem;
+    justify-content: space-around;
+    padding: 15% auto;
+    text-align: center;
+}
+.f-flex {
+    display: flex;
+    margin-inline: auto;
+    justify-content: space-between;
+}
+.f-links {
+    margin-top: -17%;
+    width: 75%;
+}
+.icons {
+    margin-bottom: -14%;
+    width: 45%;
+}
+
