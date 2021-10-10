@@ -44,7 +44,49 @@ head,body {
 .b-menu {
     margin: 2em 1.5em 0 0;
 }
+.menu {
+    visibility: hidden;
+    position: fixed;
+    width: 85%;
+    height: 18.5em;
+    -webkit-clip-path: polygon(0 7%, 92% 7%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 7%, 92% 7%, 100% 0, 100% 100%, 0 100%);
+    top: 5.8em;
+    left: 7.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    text-align: center;
+}
+.actions {
+    width: 8.5em;
+    height: 3em;
+    color: var(--Dark-grayish-blue);
+    font-size: 1.1em;
+    font-family: "barlow", serif;
+    text-decoration: none;
+    border-radius: 50px;
+}
+.menu > a > p {
+    margin: auto;
+}
+.contact {
+    margin-top: 0.3em;
+    width: 9.5em;
+    height: 3.4em;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Fraunces", serif;
+    background: var(--Yellow);
+    color: var(--Very-dark-desaturated-blue);
+    text-decoration: none;
+    border-radius: 150px;
+    border-style: none;
+}
 h1 {
+    margin-top: 0;
     font-family: "Fraunces", serif;
     font-size: 2.3rem;
     color: white;
@@ -53,7 +95,7 @@ h1 {
 }
 .arow {
     align-self: center;
-    margin-top: -4.25em;
+    margin-top: -3.55em;
 }
 .Image {
     width: 100%;   
@@ -82,9 +124,11 @@ p {
     line-height: 1.65em;
 }
 .p-color1 {
+    font-weight: 700;
     color: var(--Dark-grayish-blue);
 }
 a {
+    width: fit-content;
     font-size: 0.8em;
     font-weight: 700;
     font-family: "Fraunces", serif;
@@ -93,6 +137,13 @@ a {
 }
 .a1 {
     text-decoration: none;
+    cursor: pointer;
+}
+.a1:hover + .l1 {
+    background: hsl(49, 95%, 38%);
+}
+.a1:hover + .l2 {
+    background: hsl(7, 89%, 50%);
 }
 .line {
     margin: -1.5% 0 0 0;
@@ -122,14 +173,21 @@ h3 {
     font-size: 1rem;
 }
 .section3 {
+    flex: 1;
     margin: 6% 6%;
 
 }
 .signature {
     justify-content: center;
 }
+.signature > .job {
+    font-weight: 200;
+}
+.div-orange > .section2 {
+    margin-bottom: 7em;
+}
 h4 {
-    margin-bottom: 18%;
+    margin-bottom: 0;
     font-size: 0.9em;
     font-family: "Fraunces", serif;
     color: var(--Grayish-blue);
@@ -145,10 +203,12 @@ h4 {
     margin: 0;
     font-size: small;
     font-family: "Fraunces", serif;
+    font-weight: 300;
     color: var(--Grayish-blue);
 }
 #profiles {
-    margin-top: 5.3em;
+    gap: 0.5em;
+    margin-top: 2em;
     margin-bottom: 2.8em;
 }
 
@@ -167,13 +227,12 @@ h4 {
     display: grid;
     width: 100%;
     grid-template-columns: 1fr 1fr;
-
 }
 .g-item {
     width: 100%;
 }
 footer {
-    background: var(--Dark-moderate-cyan);
+    background: hsl(168, 42%, 66%);
     width: 100%;
     height: 21.83rem;
     padding: 15% auto;
@@ -190,11 +249,13 @@ footer {
     justify-content: space-between;
 }
 .f-links {
+    margin-top: 0.5em;
     font-size: 0.9em;
     gap: 3em;
 }
 .icons {
-    margin-top: 3.7em;
+    fill: #2C7566;
+    margin-top: 5em;
     gap: 2em;
     color: var(--Dark-moderate-cyan);
 }
@@ -213,10 +274,58 @@ footer {
 }
 @media only screen and (min-width: 1024px)
 {
+
     .hero {
         height: 39em;
         background-image: url("/images/desktop/image-header.jpg");
         background-size: 100% 100%;
+    }
+    .header {
+
+    }
+    .menu {
+        visibility: visible;
+        position: static;
+        width: auto;
+        height: auto;
+        top: auto;
+        left: auto;
+        margin: 1.2em 2em 0 0;
+        gap: 0.2em;
+        flex-direction: row;
+        background: none;
+    }
+    .actions {
+        display: flex;
+        width: 7.5rem;
+        height: 2.8rem;
+        color: white;
+        font-size: 1rem;
+    }
+    .actions:hover {
+        color: black;
+        cursor:pointer;
+    }
+    .contact {
+        font-weight: 600;
+        width: 8.5rem;
+        height: 3.4rem;
+        background: white;
+        color:black;
+    }
+    .contact:hover {
+        background: rgba(255, 255, 255, 0.3);
+        color: white;
+        cursor: pointer;
+    }
+    .b-menu {
+        display: none;
+    }
+    h1 {
+        font-size: 2.7em;
+    }
+    .arow {
+        margin-top: -2.8em;
     }
     .wraper {
         display: grid;
@@ -228,6 +337,14 @@ footer {
     }
     .TYB {
         ORDER: 1;
+        width: 68%;
+        margin: auto;
+        justify-content: normal;
+        gap: 1em;
+        text-align: left;
+    }
+    .TYB > h2 {
+        width: 80%;
     }
     .egg {
         content: url("/images/desktop/image-transform.jpg");
@@ -239,6 +356,20 @@ footer {
     }
     .SOTRA {
         ORDER: 4;
+        width: 68%;
+        margin: auto;
+        justify-content: normal;
+        gap: 1em;
+        text-align: left;
+    }
+    h2 {
+        font-size: 2em;
+        font-weight: 900;
+    }
+    .line {
+        margin: -1.35% 0 0 -1.7%;
+        align-self: auto;
+        cursor: pointer;
     }
     .orange {
         content: url("/images/desktop/image-photography.jpg");
@@ -252,10 +383,48 @@ footer {
     .div-orange {
         order: 6;
     }
+    .section2 > p {
+        width: 55%;
+        margin-inline: auto;
+    }
+    h4 {
+        font-size: 1.3rem;
+        margin-top: 3.2em;
+    }
     #profiles {
         flex-direction: row;
+        gap: 0;
+        width: 95%;
+        margin-inline: auto;
+        margin-top: 0;
+    }
+    #profiles > .section3 {
+        margin: 6% 3% 6% 3%;
+    }
+    .p2 {
+        line-height: 2em;
     }
     .grid {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    #milk-p {
+        content: url("/images/desktop/image-gallery-milkbottles.jpg");
+    }
+    #slice-p {
+        content: url("/images/desktop/image-gallery-orange.jpg");
+    }
+    #cone-p {
+        content: url("/images/desktop/image-gallery-cone.jpg");
+    }
+    #suger-p {
+        content: url("/images/desktop/image-gallery-sugarcubes.jpg");
+    }
+    .icons {
+        gap: 1.7em;
+    }
+    .action:hover,.social-icon:hover {
+        fill: white;
+        color: white;
+        cursor: pointer;
     }
 }
