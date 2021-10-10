@@ -128,7 +128,6 @@ p {
     color: var(--Dark-grayish-blue);
 }
 a {
-    width: fit-content;
     font-size: 0.8em;
     font-weight: 700;
     font-family: "Fraunces", serif;
@@ -370,6 +369,9 @@ footer {
         margin: -1.35% 0 0 -1.7%;
         align-self: auto;
         cursor: pointer;
+    }
+    .a1 {
+        width: fit-content;
     }
     .orange {
         content: url("/images/desktop/image-photography.jpg");
